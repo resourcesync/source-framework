@@ -7,4 +7,7 @@ Initial sketches for a ResourceSync source framework
 
 ![components](img/comp_01.png)
 
----
+
+## Variability Model
+
+![var_mod](img/var_mod_01.png)

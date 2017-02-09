@@ -9,7 +9,7 @@ Initial sketches for a ResourceSync source framework
 
 _Fig. 1. Component Diagram with variability points_
 
-#### i01 ResourceSync
+### i01 ResourceSync
 
 Central component, director of execution. 
 
@@ -26,14 +26,14 @@ __Provided interface:__
 * Observable, register observers that will receive notifications of events taking place during 
 a resourcesync run
 
-#### i02 rs-xml
+### i02 rs-xml
 
 Component capable of converting resourcesync sitemaps to and from xml and classes.
 
 __Provided interface:__
 * IXml, convert to and from hierarchical classes and xml streams/files
 
-#### i03 Parameters
+### i03 Parameters
 
 Component capable of persisting parameters and configuration details for different configurations.
 
@@ -41,7 +41,7 @@ __Provided interface:__
 * IParas, read and write parameters and configuration details from/to file, validate parameters, 
 list configurations
 
-#### i04 Generator
+### i04 Generator
 
 Component capable of yielding resource metadata items (the data in the element url of an urlset).
 There will be ResourceGenerators and ChangeGenerators, each for a specific implementation
@@ -58,7 +58,7 @@ previous resource state
 __Provided interface:__
 * IGenerate, yield applicable resource metadata items
 
-#### i05 Executor
+### i05 Executor
 Component capable of yielding resourcelists or changelists, resourcedumps or changedumps.
 
 __Required interfaces:__
@@ -69,7 +69,7 @@ __Required interfaces:__
 __Provided interface:__
 * IExcecute, executing a specific resourcesync run
 
-#### i06 Sender
+### i06 Sender
 
 Provides logistics for resourcesync metadata and resources after an execution run. 
 
@@ -80,11 +80,11 @@ __Provided interface:__
 * ISend, move/copy/send resourcesync metadata files and/or resources to the
 document root of a web server
 
-#### i07 Select
+### i07 Select
 
 Select resources
 
-#### i08 Gate
+### i08 Gate
 
 Filter resources
 
@@ -95,12 +95,12 @@ Filter resources
 _Fig. 2. Variability model. Components could be generic, except for components in grayed areas. These
  are implementation specific for use case (File System, Elastic Search etc.)_
 
-#### VP01 Configure
+### VP01 Configure
 
 There required core parameters (metadata_dir, url_prefix, strategy etc.) and implementation specific
 parameters. Should we separate them, make them extensible?
 
-#### VP02 Strategy
+### VP02 Strategy
 
 What should the executor produce? Simple an enumeration of the 4 types.
 

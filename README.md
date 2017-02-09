@@ -104,11 +104,11 @@ parameters. Should we separate them, make them extensible?
 
 What should the executor produce? Simple an enumeration of the 4 types.
 
-#### VP03 Execute
+### VP03 Execute
 
 Choice of executor. Coupled on Strategy. 
 
-#### VP04 Generate
+### VP04 Generate
 
 Choice of type of generator.
 

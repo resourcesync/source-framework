@@ -112,7 +112,7 @@ Choice of executor. Coupled on Strategy.
 
 Choice of type of generator.
 
-#### VP05 Generator Impl.
+### VP05 Generator Impl.
 
 Choice of implementation of generator.
 

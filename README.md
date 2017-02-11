@@ -3,9 +3,9 @@ Initial sketches for a ResourceSync Source Framework
 
 ---
 
-## Components Diagram
+## Component Diagram
 
-![components](img/comp_02.svg)
+![components](img/comp_02.png)
 
 _Fig. 1. Component Diagram for a ResourceSync Source Framework_
 

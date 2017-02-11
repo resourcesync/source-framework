@@ -28,7 +28,8 @@ interactions, than have a look at the required variability in the system.
 
 ![components](img/comp_02.png)
 
-_Fig. 1. Component Diagram for a ResourceSync Source Framework_
+_Fig. 1. Component Diagram for a ResourceSync Source Framework. Optional components and
+interfaces are in dotted lines._
 
 ### Generic Framework
 The `generic framework` houses all functionality needed to do a complete ReourceSync
@@ -58,18 +59,18 @@ __Questions:__ Should it be responsible for pasting the rest of the components
 together as well or is this a task for an external plugin framework?
 
 __Required interfaces:__
-* `IParas`, parameters, configuration.
-* `IExceute`, for executing a resourcesync run.
-* `ISend` (optional) for moving/copying/sending resourcesync metadata files and/or resources
+* `IParas` - Parameters, configuration.
+* `IExceute` - For executing a resourcesync run.
+* `ISend` - Optional. For moving/copying/sending resourcesync metadata files and/or resources
 to the document root of a web server.
 
 __Provided interface:__
 * `ISync` - Start a ResourceSync run.
-* `Observable`, register observers that will receive notifications of events taking place 
+* `Observable` - Register observers that will receive notifications of events taking place 
 during ResourceSync execution.
 
 ### i02 rs-xml
-Component capable of converting resourcesync sitemaps to and from xml and classes.
+Component capable of converting resourcesync sitemaps from xml to classes and vice versa.
 
 __Provided interface:__
 * `IXml` - Convert to and from hierarchical classes and xml streams/files.
@@ -126,33 +127,59 @@ __Provided interface:__
 
 ### i05 Executor
 Component capable of yielding resourcelists or changelists, resourcedumps or changedumps.
+The `Executor` stages a ResourceSync execution:
+* Start processing
+* Prepare metadata directory
+* Generate ResourceSync documents
+* (Pack resources) (Only needed for dump variants.)
+* Post process ResourceSync documents
+* Create indexes (if applicable)
+* Create/update capability list
+* Create/update description
+* End processing
 
 __Required interfaces:__
-* IGenerate, source of applicable resource metadata items
-* IXml, for producing sitemaps, xml streams/files
-* IParas, source of validated parameters, derived parameters
+* `IGenerate` - Source of applicable resource metadata items.
+* `IXml` - For producing sitemaps, xml streams/files
+* `IParas` - Source of validated parameters, derived parameters
 
 __Provided interface:__
-* IExcecute, executing a specific resourcesync run
+* `IExcecute` - Execute a specific resourcesync run.
 
 ### i06 Sender
 
-Provides logistics for resourcesync metadata and resources after an execution run. 
+Provides logistic services for handling resourcesync metadata and resources after an execution. 
+After a successful ResourceSync execution several scenarios are possible:
+* Resources and ResourceSync metadata are already under the document root of a web server. 
+Synchronization was done 'in situ'. No further action is needed.
+* Local copy. Resources are on the same machine as the web server, but published resources have to be
+moved/copied under the document root of the web server.
+* Remote copy. Resources and metadata are on a different machine then the web server. Resources
+and metadata have to be moved by means of secure copy protocol.
+* Trigger. Resources and metadata are on a file sync like [ownCloud](https://owncloud.org/) and
+a share is mounted on the web server machine. Trigger a process on the web server machine
+that will copy resources/metadata from the mounted share to the document root.
+* Zip. Pack resources and metadata in a zip-file that can be handed to a systems admin.
 
 __Required interface:__
-* IParas, source of validated parameters, derived parameters
+* `IParas` - Source of validated parameters, derived parameters.
 
 __Provided interface:__
-* ISend, move/copy/send resourcesync metadata files and/or resources to the
-document root of a web server
+* `ISend` - Move/copy/send resourcesync metadata files and/or resources to the
+document root of a web server.
 
 ### i07 Select
 
-Select resources
+Select resources.
 
 ### i08 Gate
 
-Filter resources
+Filter resources. Pluggable. Scenarios where intricate selecting or filtering of resources is 
+needed. Examples: Only schema-valid xml resources must be published. Resources that contain
+certain key words must be grouped in sets under different capability lists. Metadata 
+on the resource in a database is decisive for publishing the resource. etc.
+
+The generic framework should facilitate a plugin mechanism for `Selectors` and `Gates`.
 
 ## Variability Model
 

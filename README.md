@@ -127,6 +127,8 @@ __Provided interface:__
 
 ### i05 Executor
 Component capable of yielding resourcelists or changelists, resourcedumps or changedumps.
+The `Executor` delivers a cohesive set of ResourceSync sitemap documents under exactly
+one capability list and updates the description.
 The `Executor` stages a ResourceSync execution:
 * Start processing
 * Prepare metadata directory
@@ -152,13 +154,12 @@ Provides logistic services for handling resourcesync metadata and resources afte
 After a successful ResourceSync execution several scenarios are possible:
 * Resources and ResourceSync metadata are already under the document root of a web server. 
 Synchronization was done 'in situ'. No further action is needed.
+* Resources and metadata are on a file sync like [ownCloud](https://owncloud.org/) and
+a share is mounted on the web server machine. No further action is needed.
 * Local copy. Resources are on the same machine as the web server, but published resources have to be
 moved/copied under the document root of the web server.
 * Remote copy. Resources and metadata are on a different machine then the web server. Resources
 and metadata have to be moved by means of secure copy protocol.
-* Trigger. Resources and metadata are on a file sync like [ownCloud](https://owncloud.org/) and
-a share is mounted on the web server machine. Trigger a process on the web server machine
-that will copy resources/metadata from the mounted share to the document root.
 * Zip. Pack resources and metadata in a zip-file that can be handed to a systems admin.
 
 __Required interface:__
@@ -166,7 +167,7 @@ __Required interface:__
 
 __Provided interface:__
 * `ISend` - Move/copy/send resourcesync metadata files and/or resources to the
-document root of a web server.
+document root of a web server or pack them in a zip file.
 
 ### i07 Select
 
@@ -181,12 +182,25 @@ on the resource in a database is decisive for publishing the resource. etc.
 
 The generic framework should facilitate a plugin mechanism for `Selectors` and `Gates`.
 
+## Variability Points
+
+The system is expected to have variability on several points. The variability can be in the 
+configuration
+of external plugins and in the program flow of the process. Both kinds of variability can be
+interdependent on each other. 
+
+![variability points](img/comp_vp_02.png)
+
+_Fig. 2. Variability points_
+
 ## Variability Model
 
-![var_mod](img/var_mod_01.png)
+![variability model](img/var_mod_02.png)
 
-_Fig. 2. Variability model. Components could be generic, except for components in grayed areas. These
- are implementation specific for use case (File System, Elastic Search etc.)_
+_Fig. 3. Variability model_
+
+
+---
 
 ### VP01 Configure
 

@@ -406,25 +406,6 @@ Platform</y:NodeLabel>
       </data>
     </node>
     <node id="n27">
-      <data key="d5"/>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="1976.9614322682326" y="-257.4086151123048"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="13.0" y="13.0">
-            <y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n28">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="84.47343444824219" width="112.0" x="1475.7333562987287" y="122.0892877354868"/>
@@ -439,7 +420,7 @@ Gate</y:NodeLabel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n29">
+    <node id="n28">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="65.72343444824219" width="102.0" x="1480.7333562987287" y="329.5132827758789"/>
@@ -454,7 +435,7 @@ Gate</y:NodeLabel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n30">
+    <node id="n29">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="84.47343444824219" width="112.0" x="786.9614322682326" y="520.9601516723633"/>
@@ -469,7 +450,7 @@ Send</y:NodeLabel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n31">
+    <node id="n30">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="65.72343444824219" width="102.0" x="682.4914989969138" y="713.7898483276367"/>
@@ -483,7 +464,7 @@ Send</y:NodeLabel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n32">
+    <node id="n31">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="65.72343444824219" width="102.0" x="791.9614322682326" y="713.7898483276367"/>
@@ -497,7 +478,7 @@ Send</y:NodeLabel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n33">
+    <node id="n32">
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="65.72343444824219" width="102.0" x="901.4313655395513" y="713.7898483276367"/>
@@ -760,7 +741,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e24" source="n28" target="n29">
+    <edge id="e24" source="n27" target="n28">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -782,7 +763,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e26" source="n28" target="n3">
+    <edge id="e26" source="n27" target="n3">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="34.03856773176744" ty="0.09799008078408633">
@@ -794,7 +775,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e27" source="n26" target="n28">
+    <edge id="e27" source="n26" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-31.733356298728722" ty="22.923995040391986">
@@ -806,7 +787,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e28" source="n30" target="n31">
+    <edge id="e28" source="n29" target="n30">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -816,7 +797,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e29" source="n30" target="n32">
+    <edge id="e29" source="n29" target="n31">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -826,7 +807,7 @@ Send</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e30" source="n30" target="n33">
+    <edge id="e30" source="n29" target="n32">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

@@ -1,17 +1,17 @@
 # source-framework
-Initial sketches for a ResourceSync source framework
+Initial sketches for a ResourceSync Source Framework
 
 ---
 
-## Components and variability points
+## Components Diagram
 
-![components](img/comp_01.png)
+![components](img/comp_02.svg)
 
-_Fig. 1. Component Diagram with variability points_
+_Fig. 1. Component Diagram for a ResourceSync Source Framework_
 
 ### i01 ResourceSync
 
-Central component, director of execution. 
+Central component, director of execution, orchestrating execution. 
 
 __Questions:__ Should it be responsible for pasting the rest of the components
 together as well or is this a task for an external plugin framework?

@@ -200,6 +200,8 @@ _Fig. 2. Variability points_
 _Fig. 3. Variability model_
 
 
+----
+
 ---
 
 ### VP01 Configure

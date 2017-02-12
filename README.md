@@ -193,43 +193,61 @@ interdependent on each other.
 
 ![variability points](img/comp_vp_02.png)
 
-_Fig. 2. Variability points (See ![svg](img/comp_vp_02.svg))_
+_Fig. 2. Variability points. (See ![svg](img/comp_vp_02.svg))_
 
 ## Variability Model
 
 ![variability model](img/varmod_02.png)
 
-_Fig. 3. Variability model (See ![svg](img/varmod_02.svg))_
+_Fig. 3. Variability model. (See ![svg](img/varmod_02.svg))_
 
+The variability model shows the variability points (triangles) and their corresponding variants or 
+choices (rectangles). Optional choices are indicated with a dotted line between point and
+variant. Mandatory choices and the cardinality are indicated with a slash-notation (1/4).
+Dependencies between points and choices are indicated with dotted arrows. Alternatively,
+interdependencies are marked with colored areas. (Modelling of variability described in
+[Software Product Line Engineering (Pohl, Klaus, Böckle, Günter, van der Linden, Frank J.)](http://www.lirmm.fr/~seriai/encadrements/theses/rafat/uploads/Documents/Software%20Product%20Line%20Engineering%20Foundations%20Principles%20and%20Techniques.pdf))
+Plugin variants, or better variants outside the generic framework, are depicted against a
+grey background.
 
-----
+### VP01 Configuration
 
----
-
-### VP01 Configure
-
-There required core parameters (metadata_dir, url_prefix, strategy etc.) and implementation specific
-parameters. Should we separate them, make them extensible?
+There are required core parameters (metadata_dir, url_prefix, strategy etc.) and implementation specific
+parameters.
 
 ### VP02 Strategy
 
-What should the executor produce? Simple an enumeration of the 4 types.
+What should the executor produce? Simple an enumeration of the 4 types: resourcelist, changelist,
+resourcedump and changedump. Strategy is coupled one-on-one with VP03 Execution Type.
 
-### VP03 Execute
+### VP03 Execution Type
 
-Choice of executor. Coupled on Strategy. 
+Choice of executor: ResourceList, ChangeList, ResourceDump or ChangeDump. The Execution Type 
+is dependent upon VP04 Generator Type and VP0 Generator Faculties. With a Generator Implementation
+that is not Dump-Capable, no dumps can be made. With a Generator Implementation that has no
+Change Generator, no ChangeLists, ChangeDumps can be made.
 
-### VP04 Generate
+### VP04 Generator Type
 
-Choice of type of generator.
+Type of generator. Resource Generator, Change Generator or both. An implementation must provide
+at least one type of generator.
 
-### VP05 Generator Impl.
+### VP05 Generator Faculties
 
-Choice of implementation of generator.
+Faculties of the implementation. Optional variant Dump-Capable. An implementation is
+Dump-Capable if resources can be obtained in order to create dumps.
 
-### VP06 Send
+### VP06 Generator Impl.
 
-Optional pack/send/move metadata and/or resources to document root of server
+The actual generator plugin.
+
+### VP07 Gate
+
+Resource Gate adapted for the type of implementation.
+
+### VP08 Logistics
+
+Various ways to move resources and metadata to the document root of a web server.
 
 
 

@@ -99,20 +99,22 @@ A fully implemented `Generator` has both a `ResourceGenerator` and a `ChangeGene
 `ResourceGenerator` is in use for strategies ResourceList and ResourceDump; `ChangeGenerator`
 for ChangeList and ChangeDump.
 
-For each applicable resource a `ResourceGenerator` encounters it yields through its provided
+For each applicable resource encountered, a `ResourceGenerator` yields through its provided
 `IGenerate` interface at least the values for the elements/attributes:
 ```xml
 		<loc>, <lastmod>, <rs:md hash, length, type/>
 ```
 
-For each applicable resource a `ChangeGenerator` encounters it yields through its provided
+For each applicable resource encountered, a `ChangeGenerator` yields through its provided
 `IGenerate` interface at least the values for the elements/attributes:
 ```xml
 		<loc>, <lastmod>, <rs:md change, datetime, hash, length, type/>
 ```
 Both can also give (values for) the location of the resource on the local file system and/or the 
-identifier for the resource. For strategies ResourceDump and ChangeDump being able to
-obtain the resource through or by means of the generator is mandatory.
+identifier for the resource. 
+
+A `Generator` that has the faculty `dump-capable` is able to supply a path to or a stream of
+the resource in order to be packed in a dump.
  
 __Required interfaces:__
 * `ISelect` - Optional. Select resources. (For Generators based on indexing systems this is

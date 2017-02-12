@@ -673,7 +673,7 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-396,74)" stroke-linecap="butt">
       <text x="1289.6685" xml:space="preserve" y="520.793" clip-path="url(#clipPath2)" stroke="none">VP01</text>
-      <text x="1275.7319" xml:space="preserve" y="534.9258" clip-path="url(#clipPath2)" stroke="none">Configure</text>
+      <text x="1264.3735" xml:space="preserve" y="534.9258" clip-path="url(#clipPath2)" stroke="none">Configuration</text>
     </g>
     <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1.8392,0,0,1.3911,724.463,-2.1975)">
       <g clip-path="url(#clipPath27)">
@@ -740,8 +740,9 @@
       </g>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-396,74)" stroke-linecap="butt">
-      <text x="564.4019" xml:space="preserve" y="6.1678" clip-path="url(#clipPath2)" stroke="none">VP03</text>
-      <text x="556.5708" xml:space="preserve" y="20.3006" clip-path="url(#clipPath2)" stroke="none">Execute</text>
+      <text x="564.4019" xml:space="preserve" y="-7.965" clip-path="url(#clipPath2)" stroke="none">VP03</text>
+      <text x="550.77" xml:space="preserve" y="6.1678" clip-path="url(#clipPath2)" stroke="none">Execution</text>
+      <text x="565.1812" xml:space="preserve" y="20.3006" clip-path="url(#clipPath2)" stroke="none">Type</text>
     </g>
     <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1.8392,0,0,1.3911,-3.9181,665.4767)">
       <g clip-path="url(#clipPath29)">
@@ -810,7 +811,7 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-396,74)" stroke-linecap="butt">
       <text x="1046.4019" xml:space="preserve" y="3.6678" clip-path="url(#clipPath2)" stroke="none">VP08</text>
-      <text x="1047.1548" xml:space="preserve" y="17.8006" clip-path="url(#clipPath2)" stroke="none">Send</text>
+      <text x="1035.6997" xml:space="preserve" y="17.8006" clip-path="url(#clipPath2)" stroke="none">Logistics</text>
     </g>
     <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1.8392,0,0,1.3911,666.014,652.9501)">
       <g clip-path="url(#clipPath31)">

@@ -197,7 +197,7 @@ _Fig. 2. Variability points_
 
 ![variability model](img/varmod_02.png)
 
-_Fig. 3. Variability model_
+_Fig. 3. Variability model (See in ![svg](img/varmod_02.svg))_
 
 
 ----

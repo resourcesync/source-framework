@@ -29,7 +29,7 @@ interactions, than have a look at the required variability in the system.
 ![components](img/comp_02.png)
 
 _Fig. 1. Component Diagram for a ResourceSync Source Framework. Optional components and
-interfaces are in dotted lines. (See ![svg](img/comp_02.svg))_
+interfaces are in dotted lines. (See ![svg](img/comp_02.svg "svg image"))_
 
 ### Generic Framework
 The `generic framework` houses all functionality needed to do a complete ReourceSync
@@ -193,13 +193,13 @@ interdependent on each other.
 
 ![variability points](img/comp_vp_02.png)
 
-_Fig. 2. Variability points. (See ![svg](img/comp_vp_02.svg))_
+_Fig. 2. Variability points. (See ![svg](img/comp_vp_02.svg "svg image"))_
 
 ## Variability Model
 
 ![variability model](img/varmod_02.png)
 
-_Fig. 3. Variability model. (See ![svg](img/varmod_02.svg))_
+_Fig. 3. Variability model. (See ![svg](img/varmod_02.svg "svg image"))_
 
 The variability model shows the variability points (triangles) and their corresponding variants or 
 choices (rectangles). Optional choices are indicated with a dotted line between point and

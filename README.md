@@ -7,7 +7,7 @@ While sketching a generic implementation of the source side for
 a [ResourceSync](http://www.openarchives.org/rs/1.1/resourcesync)
 framework, we lean heavily on [rspub-core](https://github.com/EHRI/rspub-core),
 a file-system-specific implementation for the source-side and 
-on [omtd-resync-demo](https://github.com/openminted/omtd-resync-demo),
+on [omtd-rspub-elastic](https://github.com/openminted/omtd-rspub-elastic),
 an implementation using 
 the [Elasticsearch](https://www.elastic.co/products/elasticsearch) storage system.
 It appears that by taking the `Generator` out of the `Executor` in these 
